@@ -36,3 +36,57 @@
     transform: rotate(360deg);
   }
 }
+
+/* App.css */
+.news-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px;
+  max-width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.news-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.news-card h2 {
+  font-size: 1.2rem;
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.news-card p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.news-card a {
+  color: #1e90ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.news-card a:hover {
+  text-decoration: underline;
+}
+
+
+.news-container {
+  padding: 20px; /* Ajusta el valor según sea necesario */
+  display: grid;
+  gap: 20px; /* Espacio entre las tarjetas */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Alinea tarjetas en un diseño adaptable */
+}
+
+/* Si quieres que todo el contenedor tenga más padding */
+.home-container {
+  padding: 20px;
+}
+
+
