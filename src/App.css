@@ -37,22 +37,35 @@
   }
 }
 
-/* App.css */
-.news-card {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 16px;
-  margin: 16px;
-  max-width: 400px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+.news-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.news-card img {
+.news-card {
   width: 100%;
-  height: auto;
+  max-width: 600px;
+  padding: 16px;
+  margin: 10px 0; /* Espacio vertical entre tarjetas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
-  margin-bottom: 12px;
 }
+
+
+
+/* src/App.css */
+
+.news-card img {
+  width: 100%;       /* Ocupa todo el ancho del contenedor */
+  max-width: 300px;  /* Limita el ancho máximo */
+  height: auto;      /* Mantiene la proporción de la imagen */
+  border-radius: 8px; /* Opcional: esquinas redondeadas */
+  object-fit: cover;  /* Corta la imagen si es demasiado grande */
+}
+
 
 .news-card h2 {
   font-size: 1.2rem;
@@ -75,18 +88,48 @@
 .news-card a:hover {
   text-decoration: underline;
 }
-
-
-.news-container {
-  padding: 20px; /* Ajusta el valor según sea necesario */
-  display: grid;
-  gap: 20px; /* Espacio entre las tarjetas */
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Alinea tarjetas en un diseño adaptable */
-}
-
 /* Si quieres que todo el contenedor tenga más padding */
 .home-container {
   padding: 20px;
 }
+
+/* src/components/NavBar.css */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #2c3e50, #4ca1af); /* Fondo degradado */
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-link {
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.navbar-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #e2e2e2;
+}
+
 
 

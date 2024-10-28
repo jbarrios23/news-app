@@ -15,9 +15,7 @@ const Home = () => {
                     <NewsCard key={article.url} {...article} />
                 ))}
             </div>
-            <Link to="/category/tecnology">
-                <button>Ver Categorías</button>
-            </Link>
+           
         </div>
     );
 };
