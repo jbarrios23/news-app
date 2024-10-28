@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-//import { fetchNewsByCategory } from '../services/newsService';
+import { fetchNewsByCategory } from '../service/newsService';
 import NewsCard from '../components/NewsCard';
 
 const Category = () => {
   const { category } = useParams();
   const [news, setNews] = useState([]);
+  console.log("Category",category)
 
   useEffect(() => {
-    //fetchNewsByCategory(category).then(setNews);
+    
+    fetchNewsByCategory(category).then(setNews);
   }, [category]);
 
   return (
